@@ -11,7 +11,7 @@ import { isLogicalExpression } from '@babel/types';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-
+const applicationKey='c14aac6f866abd8129cc457ce54da71e'
 
 // let data = JSON.parse(setData);
 
@@ -44,7 +44,7 @@ function App() {
       console.log(foodItems);
       image = info.image;
       title = info.label;
-      <img src={image}></img>
+      console.log(info)
       // description = info;  //!!!!!!
       url = info.url;
       calories = info.calories.toFixed(0);
@@ -63,7 +63,7 @@ function App() {
       
       // console.log(data);
     // open the request with the verb and the url
-    xhr.open('GET', `https://api.edamam.com/search?q=${foodItems.join(", ")}&app_id=2159764c&app_key=c14aac6f866abd8129cc457ce54da71e`)
+    xhr.open('GET', `https://api.edamam.com/search?q=${foodItems.join(", ")}&app_id=2159764c&app_key=${applicationKey}`)
     // send the request
     xhr.send()
   }
