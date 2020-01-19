@@ -1,0 +1,11 @@
+.recipe {
+    height : 200px;
+    width: 70vw;
+    background: grey;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

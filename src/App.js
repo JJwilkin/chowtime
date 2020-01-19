@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Recipe from './recipe/Recipe'
 import DragDrop from './drag-drop/drag-drop'
 import BottomNav from './bottom-nav/bottom-nav'
 import Analyze from './analyze/Analyze'
@@ -77,7 +78,10 @@ function App() {
         <Header />
         <Switch>
             <Route exact path="/" component={DragDrop} />
-            <Route path="/process" component={() => <FoodList foodlist={foodItems} />} />
+            <Route path="/process" component={() => <FoodList foodlist={foodItems} />} 
+            />
+            <Route path="/recipe" component={() => <Recipe  />} 
+            />
         </Switch>
         <BottomNav />
       </header>
