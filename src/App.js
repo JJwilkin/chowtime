@@ -1,17 +1,14 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-<<<<<<< HEAD
-import Header from './header/Header'
+
 import DragDrop from './drag-drop/drag-drop'
 import BottomNav from './bottom-nav/bottom-nav'
-=======
 import Header from './header/Header';
 import { isLogicalExpression } from '@babel/types';
 
 
 // let data = JSON.parse(setData);
->>>>>>> 8e25c57bf13c7fb0b2557356e4e10c0c6a36626b
 
 function App() {
   const [test, setTest] = useState(false);
@@ -70,13 +67,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header />
-<<<<<<< HEAD
         <DragDrop />
         <BottomNav />
-=======
 
   <button onClick={() => getData()} >{test ? <h1>Hello</h1> : <h1>Goodbye</h1>} </button>
->>>>>>> 8e25c57bf13c7fb0b2557356e4e10c0c6a36626b
       </header>
   
     </div>
