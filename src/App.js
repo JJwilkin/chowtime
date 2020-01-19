@@ -12,7 +12,6 @@ import { isLogicalExpression } from '@babel/types';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-const applicationKey='c14aac6f866abd8129cc457ce54da71e'
 
 // let data = JSON.parse(setData);
 
