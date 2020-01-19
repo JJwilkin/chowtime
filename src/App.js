@@ -43,6 +43,7 @@ function App() {
       console.log(info);
       image = info.image;
       title = info.label;
+      <img src={image}></img>
       // description = info;  //!!!!!!
       url = info.url;
       calories = info.calories.toFixed(0);
