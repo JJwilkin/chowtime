@@ -1,68 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Inspiration
+In response to Prompt 2 of the sustainability impact space, we decided to tackle the problem of food waste largely prevalent in developed countries. Globally, one-third of all food produced is wasted, and 63% of the food Canadians throw away could have been eaten. For the average Canadian household that amounts to 140 kilograms of wasted food per year – at a cost of more than $1,100 per year. For Canada as a whole, that amounts to almost 2.2 million tonnes of edible food wasted each year, costing Canadians in excess of $17 billion.
 
-## Available Scripts
+##What it does
+From a user's perspective, Camera Chef can be used in 3 simple steps; the user uploads a clear image of their open fridge, confirms the items and quantity of which they wish to use, and chooses a recipe from the returned suggestions.
 
-In the project directory, you can run:
+To develop this user flow, the following steps were implemented:
 
-### `yarn start`
+Camera Chef accepts a user-uploaded image and uses Google's Cloud Vision API to identify and classify items in the image.
+This list of items is then cross-referenced against a dataset of grocery items to avoid vague labeling and disregard non-food items.
+The ingredients are then returned to the user as an editable list requiring quantity specification and item confirmation.
+An HTTP request is made to Edamam's Recipe API, with the food items list from the previous step, passed in as a parameter. The API references a large database of recipes with common ingredients from a large variety of sources.
+The response data is then parsed and structured to present to the user. The retained information includes the main image, link to the recipe, cook time, yield and nutritional information.
+How we built it
+We built the app with React.js, used Google's Cloud Vision API to identify food items and Edamam's Recipe API to return meal suggestions.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##Next Steps
+We had faced challenges with the Google Cloud Vision API as the initial setup was new for many group members. The initial stages of image recognition also returned vague and often unrelated items (fruit, container, fridge). To combat this, we plan to add an additional recognition layer that trains the model to recognize consumer products and specific produce. This will allow us to narrow the image recognition for instances like "fruit" to "apple", and "bottle" to "barbeque sauce".
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+##Accomplishments
+We made significant progress in tailoring Google's Cloud Vision API to meet our project needs as well as finding a reliable open-source recipe API. The user experience is also a highlight of the project as the logical flow is coherent and straight forward; ultimately accomplishing the goal of returning relevant recipes based on the ingredients a user already has.
 
-### `yarn test`
+##Built With
+`React`, `
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
