@@ -29,3 +29,21 @@ input, button {
 .upload {
   width: 40px;
 }
+
+/* img{
+  max-width:180px;
+} */
+input[type=file]{
+padding:10px;
+background:#2d2d2d;}
+
+.new_image{
+  width: 100%;
+  /* height:100%; */
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.blank {
+  background: transparent;
+}

@@ -1,8 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './drag-drop.css'
-
 export default function DragDrop () {
+  const [uploadedImage, setUploadedImage] = useState(false);
 
+
+  function previewFile() {
+    const preview = document.querySelector('img');
+    const file = document.querySelector('input[type=file]').files[0];
+    const reader = new FileReader();
+    setUploadedImage(true);
+    reader.addEventListener("load", function () {
+      // convert image file to base64 string
+      preview.src = reader.result;
+    }, false);
+  
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
   return(
     <div class="view-wrap">
       <div class="text">
@@ -10,11 +25,14 @@ export default function DragDrop () {
         <p>Take a photo of your fridge and start ake a photo of your fridge and start ake a photo of your fridge and.</p>
       </div>
       <div class="box">
-        <div class="input-holder">
-          <button onClick={ () => document.getElementById('getFile').click()}><img class="upload" src="./assets/upload-2.png"></img></button>
-          <input class="hide" id="getFile" type="file" accept="image/png, image/jpeg"></input>
+        <div class={`input-holder ${uploadedImage ? 'blank': ''}`}>
+          <button onClick={ () => document.getElementById('getFile').click()}><img class={`upload ${uploadedImage ? 'new_image' : ''}`} src="./assets/upload-2.png"></img></button>
+          <input onChange={() => previewFile(document.getElementById('getFile').files[0])} class="hide" id="getFile" type="file" accept="image/png, image/jpeg"></input>
+          
         </div>
       </div>
     </div>
   )
+
+
 }
