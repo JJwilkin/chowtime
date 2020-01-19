@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, {useState} from 'react';
 import './drag-drop.css'
 import { BrowserRouter, Route, Link } from "react-router-dom";
