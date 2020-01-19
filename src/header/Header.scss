@@ -1,4 +1,17 @@
-.intro {
+.navbar {
+  padding: 30px 30px 0 30px !important;
+  display: flex;
+  justify-content: space-between;
+}
 
-    color: blue;
+.navbar-brand {
+  font-weight: 500;
+}
+
+a {
+  width: 30px;
+}
+
+.add {
+  width: 100%;
 }

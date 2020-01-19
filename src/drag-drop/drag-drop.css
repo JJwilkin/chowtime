@@ -1,0 +1,60 @@
+.view-wrap {
+  margin: 30px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input-holder {
+  width: 100%;
+  height: 40vh;
+  background-color: rgb(247, 212, 213);
+  border-radius: 20px;
+}
+
+.box input, .box button {
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  color: transparent;
+  display: none;
+}
+
+.upload {
+  width: 40px;
+}
+
+/* img{
+  max-width:180px;
+} */
+input[type=file]{
+padding:10px;
+background:#2d2d2d;}
+
+.new_image{
+  width: 100%;
+  /* height:100%; */
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.blank {
+  background: transparent;
+}
+
+.confirm {
+  padding: 0.9rem;
+  background-color: rgb(214, 214, 214);
+  margin: 20px;
+  border-radius: 40px;
+}
+
+a {
+  color: black !important;
+}
