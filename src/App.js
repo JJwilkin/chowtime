@@ -5,7 +5,8 @@ import './App.css';
 import DragDrop from './drag-drop/drag-drop'
 import BottomNav from './bottom-nav/bottom-nav'
 import Analyze from './analyze/Analyze'
-import Header from './header/Header';
+import Header from './header/Header'
+import FoodList from './foodlist/foodlist'
 import { isLogicalExpression } from '@babel/types';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
@@ -40,7 +41,7 @@ function App() {
 
       let response = JSON.parse(xhr.responseText);
       let info = response.hits[7].recipe;
-      console.log(info);
+      console.log(foodItems);
       image = info.image;
       title = info.label;
       // description = info;  //!!!!!!
@@ -74,7 +75,7 @@ function App() {
         <Header />
         <Switch>
             <Route exact path="/" component={DragDrop} />
-            <Route path="/process" component={Analyze} />
+            <Route path="/process" component={() => <FoodList foodlist={foodItems} />} />
         </Switch>
         <BottomNav />
 
