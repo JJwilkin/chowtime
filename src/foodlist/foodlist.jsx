@@ -3,13 +3,14 @@ import './foodlist.css'
 
 export default function FoodList (props) {
     // console.log(props.foodlist)
-    props.foodList.forEach((item) => {
-    console.log(item)
-    })
   return(
-    
     <>
-    
+    {
+      props.foodlist.forEach((item) => {
+        console.log(item)
+        // <h1>{ item }</h1>
+      })
+    }
     </>
   )
 }

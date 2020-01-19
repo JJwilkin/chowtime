@@ -33,8 +33,8 @@ function App() {
   function getData() {
     // create a new XMLHttpRequest
     var xhr = new XMLHttpRequest()
-    foodItems.push('apple');
-    foodItems.push('ginger');
+    foodItems.push('potato');
+    foodItems.push('tomato');
     
     // get a callback when the server responds
     xhr.addEventListener('load', () => {
@@ -42,10 +42,10 @@ function App() {
 
       let response = JSON.parse(xhr.responseText);
       let info = response.hits[7].recipe;
-      console.log(foodItems);
+      // console.log(foodItems);
       image = info.image;
       title = info.label;
-      console.log(info)
+      // console.log(info)
       // description = info;  //!!!!!!
       url = info.url;
       calories = info.calories.toFixed(0);
