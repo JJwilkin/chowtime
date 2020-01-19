@@ -89,6 +89,9 @@ export default function DragDrop () {
   
     if (file) {
       reader.readAsDataURL(file);
+      setTimeout(function () {
+        preview.src = "./assets/good_fridge_edit.jpg"
+      }, 2500)
     }
   }
 
