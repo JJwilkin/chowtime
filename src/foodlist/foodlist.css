@@ -5,3 +5,7 @@
 .bottom-border {
     border-bottom: 3px solid black;
 }
+
+.spacing {
+    margin-bottom: 20px;
+}

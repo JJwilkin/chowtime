@@ -13,18 +13,29 @@ export default function FoodList (props) {
       })
     }
 
-    <div class='row'>
+    <div class='row spacing'>
       <div class='col-8 bottom-border'><h2>Test</h2></div>
-      <div class='col-4'>Box</div>
+      <div class='col-4'><img src="https://img.icons8.com/pastel-glyph/64/000000/edit.png"></img></div>
     </div>
 
-    <div class='row'>
+    <div class='row spacing'>
       <div class='col-8 bottom-border'><h2>Test</h2></div>
-      <div class='col-4'>Box</div>
-    </div>
-    <div class='row'>
+      <div class='col-4'><img src="https://img.icons8.com/pastel-glyph/64/000000/edit.png"></img></div>
+    </div>   <div class='row spacing'>
       <div class='col-8 bottom-border'><h2>Test</h2></div>
-      <div class='col-4'>Box</div>
+      <div class='col-4'><img src="https://img.icons8.com/pastel-glyph/64/000000/edit.png"></img></div>
+    </div>   <div class='row spacing'>
+      <div class='col-8 bottom-border'><h2>Test</h2></div>
+      <div class='col-4'><img src="https://img.icons8.com/pastel-glyph/64/000000/edit.png"></img></div>
+    </div>   <div class='row spacing'>
+      <div class='col-8 bottom-border'><h2>Test</h2></div>
+      <div class='col-4'><img src="https://img.icons8.com/pastel-glyph/64/000000/edit.png"></img></div>
+    </div>   <div class='row spacing'>
+      <div class='col-8 bottom-border'><h2>Test</h2></div>
+      <div class='col-4'><img src="https://img.icons8.com/pastel-glyph/64/000000/edit.png"></img></div>
+    </div>   <div class='row spacing'>
+      <div class='col-8 bottom-border'><h2>Test</h2></div>
+      <div class='col-4'><img src="https://img.icons8.com/pastel-glyph/64/000000/edit.png"></img></div>
     </div>
   
    
