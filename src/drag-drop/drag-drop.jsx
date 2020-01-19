@@ -35,13 +35,9 @@ export default function DragDrop () {
         </div>
       </div>
       <div class="row">
-      <Link to={`/process`} >
-        <button class="col confirm" >Confirm</button> 
-        </Link>
+        <button class="col confirm" onClick={() => getData()}><Link to={`/process`} >Confirm</Link></button> 
         <button class="col confirm" onClick={ () => document.getElementById('getFile').click()}>Upload New</button>
       </div>
     </div>
   )
-
-
 }

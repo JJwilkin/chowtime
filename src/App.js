@@ -80,8 +80,6 @@ function App() {
             <Route path="/process" component={() => <FoodList foodlist={foodItems} />} />
         </Switch>
         <BottomNav />
-
-        <button onClick={() => getData()} >{test ? <h1>Hello</h1> : <h1>Goodbye</h1>} </button>
       </header>
   
     </div>
