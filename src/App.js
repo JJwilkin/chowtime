@@ -4,9 +4,11 @@ import './App.css';
 
 import DragDrop from './drag-drop/drag-drop'
 import BottomNav from './bottom-nav/bottom-nav'
+import Analyze from './analyze/Analyze'
 import Header from './header/Header';
 import { isLogicalExpression } from '@babel/types';
 
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 
 
@@ -66,16 +68,23 @@ function App() {
 
 
   return (
+    <Router>
     <div className="App">
       <header className="App-header">
         <Header />
-        <DragDrop />
+        <Switch>
+            <Route exact path="/" component={DragDrop} />
+            <Route path="/process" component={Analyze} />
+        </Switch>
         <BottomNav />
 
-  <button onClick={() => getData()} >{test ? <h1>Hello</h1> : <h1>Goodbye</h1>} </button>
+        <button onClick={() => getData()} >{test ? <h1>Hello</h1> : <h1>Goodbye</h1>} </button>
       </header>
   
     </div>
+
+    </Router>
+
   );
 }
 

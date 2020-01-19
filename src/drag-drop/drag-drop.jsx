@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import './drag-drop.css'
+import { BrowserRouter, Route, Link } from "react-router-dom";
 export default function DragDrop () {
+
   const [uploadedImage, setUploadedImage] = useState(false);
 
 
@@ -32,7 +34,9 @@ export default function DragDrop () {
         </div>
       </div>
       <div class="row">
-        <button class="col confirm" >Confirm</button>
+      <Link to={`/process`} >
+        <button class="col confirm" >Confirm</button> 
+        </Link>
         <button class="col confirm" onClick={ () => document.getElementById('getFile').click()}>Upload New</button>
       </div>
     </div>
