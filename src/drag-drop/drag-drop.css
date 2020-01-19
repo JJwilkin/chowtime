@@ -16,7 +16,7 @@
   border-radius: 20px;
 }
 
-input, button {
+.box input, .box button {
   width: 100%;
   height: 100%;
 }
@@ -28,4 +28,11 @@ input, button {
 
 .upload {
   width: 40px;
+}
+
+.confirm{
+  padding: 0.9rem;
+  background-color: grey;
+  margin: 20px;
+  border-radius: 40px;
 }
