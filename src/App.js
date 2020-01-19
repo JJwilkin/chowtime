@@ -2,6 +2,7 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import quickstart from './matthewgod.js';
 
 import Recipe from './recipe/Recipe'
 import DragDrop from './drag-drop/drag-drop'
@@ -28,7 +29,8 @@ function App() {
   let calories;
   let totalTime;
   let servingSize;
-  
+
+  const bukebiu = quickstart().catch((err) => console.log(err));
 
   function getData() {
     // create a new XMLHttpRequest
@@ -70,7 +72,6 @@ function App() {
     // xhr.send()
   }
 
-
   return (
     <Router>
     <div className="App">
@@ -85,14 +86,17 @@ function App() {
         </Switch>
         <BottomNav />
       </header>
-  
+
+      {/* <div>
+          <div>{bukebiu}</div>}
+      </div> */}
+
     </div>
 
     </Router>
 
   );
 }
-
 
 
 export default App;
