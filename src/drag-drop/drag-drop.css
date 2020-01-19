@@ -1,0 +1,31 @@
+.view-wrap {
+  margin: 30px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input-holder {
+  width: 100%;
+  height: 40vh;
+  background-color: rgb(247, 212, 213);
+  border-radius: 20px;
+}
+
+input, button {
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  color: transparent;
+  display: none;
+}
+
+.upload {
+  width: 40px;
+}
