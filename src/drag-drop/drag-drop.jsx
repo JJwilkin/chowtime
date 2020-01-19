@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Header from '../header/Header'
 import './drag-drop.css'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
+import BottomNav from '../bottom-nav/bottom-nav'
 const applicationKey='c14aac6f866abd8129cc457ce54da71e'
 
 export default function DragDrop () {
