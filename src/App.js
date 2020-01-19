@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {quickstart} from './matthewgod.js';
 
 import DragDrop from './drag-drop/drag-drop'
 import BottomNav from './bottom-nav/bottom-nav'
@@ -22,14 +23,25 @@ function App() {
   let calories;
   let totalTime;
   let servingSize;
-  
+
+  const bukebiu = []
+
+  async function fuckyou(){
+    await quickstart().catch((err) => console.log(err)).then(res => bukebiu.push(res));
+  }
+
+  fuckyou()
+
+  console.log(bukebiu)
+
+
 
   function getData() {
     // create a new XMLHttpRequest
     var xhr = new XMLHttpRequest()
     foodItems.push('apple');
     foodItems.push('ginger');
-    
+
     // get a callback when the server responds
     xhr.addEventListener('load', () => {
       // update the state of the component with the result here
@@ -54,7 +66,7 @@ function App() {
         }
       }
     })
-      
+
       // console.log(data);
     // open the request with the verb and the url
     xhr.open('GET', `https://api.edamam.com/search?q=${foodItems.join(", ")}&app_id=2159764c&app_key=c14aac6f866abd8129cc457ce54da71e`)
@@ -70,9 +82,15 @@ function App() {
         <DragDrop />
         <BottomNav />
 
-  <button onClick={() => getData()} >{test ? <h1>Hello</h1> : <h1>Goodbye</h1>} </button>
+        <button onClick={() => getData()} >{test ? <h1>Hello</h1> : <h1>Goodbye</h1>} </button>
       </header>
-  
+
+      <div>
+        <ol>
+          {bukebiu.map(buke => <li>{buke}</li>)}
+        </ol>
+      </div>
+
     </div>
   );
 }
