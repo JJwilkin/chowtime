@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {quickstart} from './matthewgod.js';
+import quickstart from './matthewgod.js';
 
 import DragDrop from './drag-drop/drag-drop'
 import BottomNav from './bottom-nav/bottom-nav'
@@ -31,31 +31,33 @@ function App() {
     var xhr = new XMLHttpRequest()
     foodItems.push('apple');
     foodItems.push('ginger');
-
+console.log(bukebiu)
     // get a callback when the server responds
-    xhr.addEventListener('load', () => {
-      // update the state of the component with the result here
+    // xhr.addEventListener('load', () => {
+    //   // update the state of the component with the result here
 
-      let response = JSON.parse(xhr.responseText);
-      let info = response.hits[7].recipe;
-      console.log(info);
-      image = info.image;
-      title = info.label;
-      // description = info;  //!!!!!!
-      url = info.url;
-      calories = info.calories.toFixed(0);
-      totalTime = info.totalTime;
-      servingSize = info.yield;
+    //   let response = JSON.parse(xhr.responseText);
+    //   let info = response.hits[7].recipe;
+    //   console.log(info);
+    //   image = info.image;
+    //   title = info.label;
+    //   // description = info;  //!!!!!!
+    //   url = info.url;
+    //   calories = info.calories.toFixed(0);
+    //   totalTime = info.totalTime;
+    //   servingSize = info.yield;
 
-      healthLabels = info.dietLabels.concat(info.healthLabels);
-      for (let ingredient of foodItems) {
-        for (let each of info.ingredientLines) {
-          if (each.includes(ingredient) && !ingredients.includes(ingredient)) {
-            ingredients.push(ingredient);
-          }
-        }
-      }
-    })
+    //   healthLabels = info.dietLabels.concat(info.healthLabels);
+    //   for (let ingredient of foodItems) {
+    //     for (let each of info.ingredientLines) {
+    //       if (each.includes(ingredient) && !ingredients.includes(ingredient)) {
+    //         ingredients.push(ingredient);
+    //       }
+    //     }
+    //   }
+    // }
+    //
+    //)
 
       // console.log(data);
     // open the request with the verb and the url
@@ -74,9 +76,9 @@ function App() {
         <button onClick={() => getData()} >{test ? <h1>Hello</h1> : <h1>Goodbye</h1>} </button>
       </header>
 
-      <div>
+      {/* <div>
           <div>{bukebiu}</div>}
-      </div>
+      </div> */}
 
     </div>
   );

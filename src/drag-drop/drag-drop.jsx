@@ -16,6 +16,7 @@ export default function DragDrop () {
         </div>
       </div>
       <div class="row">
+      
         <button class="col confirm">Confirm</button>
         <button class="col confirm">Upload New</button>
       </div>

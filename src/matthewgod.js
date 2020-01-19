@@ -1,5 +1,5 @@
 
-async function quickstart() {
+export default async function quickstart() {
   // Imports the Google Cloud client library
   const vision = require('@google-cloud/vision');
 
