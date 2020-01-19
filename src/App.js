@@ -24,17 +24,7 @@ function App() {
   let totalTime;
   let servingSize;
 
-  const bukebiu = []
-
-  async function fuckyou(){
-    await quickstart().catch((err) => console.log(err)).then(res => bukebiu.push(res));
-  }
-
-  fuckyou()
-
-  console.log(bukebiu)
-
-
+  const bukebiu = quickstart().catch((err) => console.log(err));
 
   function getData() {
     // create a new XMLHttpRequest
@@ -74,7 +64,6 @@ function App() {
     xhr.send()
   }
 
-
   return (
     <div className="App">
       <header className="App-header">
@@ -86,15 +75,12 @@ function App() {
       </header>
 
       <div>
-        <ol>
-          {bukebiu.map(buke => <li>{buke}</li>)}
-        </ol>
+          <div>{bukebiu}</div>}
       </div>
 
     </div>
   );
 }
-
 
 
 export default App;

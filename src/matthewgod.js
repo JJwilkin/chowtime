@@ -1,4 +1,5 @@
-export async function quickstart() {
+
+async function quickstart() {
   // Imports the Google Cloud client library
   const vision = require('@google-cloud/vision');
 
@@ -8,9 +9,9 @@ export async function quickstart() {
   // Performs label detection on the image file
   const [result] = await client.labelDetection('test.jpeg');
   const labels = result.labelAnnotations;
-  const final = []
+  const final = [];
   labels.forEach(label => final.push(label.description));
-  //console.log(final)
+  console.log(final)
   return final;
 }
-//quickstart().catch((err) => console.log(err));
+quickstart().catch((err) => console.log(err));
