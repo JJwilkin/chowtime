@@ -22,7 +22,7 @@ export default function DragDrop () {
     <div class="view-wrap">
       <div class="text">
         <h5>Upload Image</h5>
-        <p>Take a photo of your fridge and start ake a photo of your fridge and start ake a photo of your fridge and.</p>
+        <p>Snap a clear photo of the items you'd like to use in your dish to get started.</p>
       </div>
       <div class="box">
         <div class={`input-holder ${uploadedImage ? 'blank': ''}`}>
@@ -30,6 +30,10 @@ export default function DragDrop () {
           <input onChange={() => previewFile(document.getElementById('getFile').files[0])} class="hide" id="getFile" type="file" accept="image/png, image/jpeg"></input>
           
         </div>
+      </div>
+      <div class="row">
+        <button class="col confirm" >Confirm</button>
+        <button class="col confirm" onClick={ () => document.getElementById('getFile').click()}>Upload New</button>
       </div>
     </div>
   )
