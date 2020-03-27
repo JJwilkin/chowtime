@@ -19,3 +19,14 @@ We had faced challenges with the Google Cloud Vision API as the initial setup wa
 
 ## Accomplishments
 We made significant progress in tailoring Google's Cloud Vision API to meet our project needs as well as finding a reliable open-source recipe API. The user experience is also a highlight of the project as the logical flow is coherent and straight forward; ultimately accomplishing the goal of returning relevant recipes based on the ingredients a user already has.
+
+## Built With
+bootstrap
+css
+edamam-recipe-api
+google-cloud-vision
+html
+javascript
+react
+
+DEVPOST: https://devpost.com/software/starterhacks-obync8
