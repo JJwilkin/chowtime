@@ -1,3 +1,5 @@
+A web application that uses image recognition to identify food items in users’ fridges to recommend healthy recipes.
+
 ## Inspiration
 In response to Prompt 2 of the sustainability impact space, we decided to tackle the problem of food waste largely prevalent in developed countries. Globally, one-third of all food produced is wasted, and 63% of the food Canadians throw away could have been eaten. For the average Canadian household that amounts to 140 kilograms of wasted food per year – at a cost of more than $1,100 per year. For Canada as a whole, that amounts to almost 2.2 million tonnes of edible food wasted each year, costing Canadians in excess of $17 billion.
 
