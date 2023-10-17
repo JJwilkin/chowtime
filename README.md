@@ -24,11 +24,11 @@ We made significant progress in tailoring Google's Cloud Vision API to meet our 
 
 ## Built With
 bootstrap
-css
-edamam-recipe-api
-google-cloud-vision
-html
-javascript
-react
+-css
+-edamam-recipe-api
+-google-cloud-vision
+-html
+-javascript
+-react
 
 DEVPOST: https://devpost.com/software/starterhacks-obync8
